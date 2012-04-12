@@ -1,0 +1,11 @@
+#!/bin/bash
+
+function setup_env() (
+  export MYAPP_NOTIFICATION_EMAIL='test@foo.com'
+  export MYAPP_FEATURE_SIGNUP=1
+  export MYAPP_FEATURE_XYZ=0
+  export MYAPP_FEATURE_MESSAGE=1
+  $@
+)
+
+setup_env bundle exec $@
